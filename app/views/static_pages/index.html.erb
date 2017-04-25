@@ -1,3 +1,14 @@
-<h1>Welcome to Bike Berlin</h1>
-<h2>Your source for used bikes in Berlin</h2>
-<p>Welcome! The date and time is <%= Time.now %></p>
+<div id="home">
+	<header>
+		<h1>Welcome to Bike Berlin</h1>
+	</header>
+		<div class="row">
+			<div class="col-sm-4 col-lg-4">
+				<p>Your source for used bikes in Berlin</p>
+				<p>Welcome! The date and time is <%= Time.now %></p>
+			</div>
+			<div class="col-sm-8 col-lg-8">
+				<%= image_tag("bike.jpg", class: "img-responsive my-image") %>
+			</div>
+		</div>
+</div>
