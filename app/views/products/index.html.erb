@@ -8,15 +8,8 @@
       <% @products.each do |product| %>
       <div class="products">
         <div class="col-sm-10 col-lg-4">
-          <h3><%= product.name %></h3><%= image_tag("bike1.jpg", class: "img-responsive my-image") %>
-          <h4><%= product.price %></h4>
+          <h3><%= product.name %></h3><%= image_tag(product.image_url, class: "img-responsive my-image") %>
           <p><%= product.description %></p>
-        </div>
-        <div class="col-sm-10 col-lg-4">
-          <%= image_tag("bike2.jpg", class: "img-responsive") %>
-        </div>
-        <div class="col-sm-10 col-lg-4">
-          <%= image_tag("bike3.jpg", class: "img-responsive") %>
         </div>
       </div>
       <% end %>
@@ -27,7 +20,8 @@
   
 </div>
 
-<!--
+
 <%= link_to 'New Product', new_product_path %>
 
--->
+
+
