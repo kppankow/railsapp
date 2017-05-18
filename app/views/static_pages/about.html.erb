@@ -3,21 +3,3 @@
 <p>Today we are working on a rails project</p>
 
 
-<h1>Rock, Paper, Scissors</h1>
-<%=
-puts "\n\nRock, Paper, Scissors!\nPress R for Rock\nPress p for Paper\nPress s for Scissors\n"
-
-computer = "rps"[rand(3)].chr
-
-player = "kp.gets.chomp.downcase"
-
-case [player, computer]
-	when ['p','r'], ['s','p'], ['r','s']
-	puts "\n\nYou Win!"
-
-	when ['r','r'], ['p','p'], ['s','s']
-	puts "\n\nTie!"
-
-else
-	puts "\n\nYou Lose!"
-end %>

@@ -1,10 +1,17 @@
-<h2>Featured Product:</h2>
+<h1>Welcome to Berlin Bikes</h1>
+<p>Hello and welcome to Berlin Bikes! Over the past decade we have been able to build one of the most reliable bike stores in the world. Our prices are competable, and yes we will match prices if you find a better deal. Come on in and check out our huge inventory.</p> 
+<p>P.S. we have top notch warrenty plans for all of our bikes!</p>
+
+
+
+
+<h2>Featured Products:</h2>
 
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	
 	<!-- Indicators -->
-	<ol class="carousel-indicators">
+	<ol class="carousel-indicators hidden">
     	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
     	<li data-target="#carousel-example-generic" data-slide-to="2"></li>
@@ -15,7 +22,8 @@
 		<div class="item<%= " active" if product == @products.first %>">
 			<%= image_tag(product.image_url, class: "img-car") %>
 			<div class="carousel-caption">
-				<%= product.name %>
+				<h2><%= product.name %>:
+				<%= product.description %></h2>
 			</div>
 		</div>
 		<% end %>
