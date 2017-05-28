@@ -13,10 +13,11 @@
 <p>
   <strong>Image url:</strong>
   <%= @product.image_url %>
+  <%= image_tag(@product.image_url, class: "img-responsive my-image") %>
 </p>
 
 <P>
-  <strong>Color:</strong>
+  <strong>Colour:</strong>
   <%= @product.colour %>
 </P>
 
