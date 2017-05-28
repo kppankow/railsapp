@@ -20,6 +20,7 @@
 	<div class="carousel-inner" role="listbox">
 		<% @products.each do |product| %>
 		<div class="item<%= " active" if product == @products.first %>">
+			<%= link_to 'Show', product %>
 			<%= image_tag(product.image_url, class: "img-car") %>
 			<div class="carousel-caption">
 				<h2><%= product.name %>:
