@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
       # return our filtered list here
       else
         # use ilike for case insensitivity on postres
-        @products = Product.where("name ilike ?", "%#{seaarch_term}%")
+        @products = Product.where("name ilike ?", "%#{search_term}%")
       end
     else
       @products = Product.all
