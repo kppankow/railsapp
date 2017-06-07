@@ -1,28 +1,23 @@
-<body>
-	<h1>Contact</h1>
-	<p>Contact me here <a href="fakemail@fake.com">fakemail@fake.com</a></p>
-	<div class="row">
-		<div class="col-sm-8">
-			<form method="post">
-				<input type="hidden" name="form-name" value="form 1">
-				<h2 class="shadow">Contact info</h2> 
-				<div class="form-group">
-					<label for="name" class="sr-only">Name*</label>
-					<input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="required">		
-				</div>
-				<div class="form-group">
-					<label for="email" class="sr-only">Email*</label>
-					<input type="text" name="email" id="email" class="form-control" placeholder="Enter your email" required="required">
-				</div>
-				<div class="form-group">
-					<label for="message" class="sr-only">Message*</label>
-					<textarea class="form-control" name="message" id="message" placeholder="Leave a message" cols="35" rows="5" required="required"></textarea>
-				</div>
-				<p id="char-count"></p>
-				<p id="visable-comment"></p>
-				<button type="submit" class="btn btn-primary" title="submit" data-target="tooltip" id="submit">Submit</button>
-			</form>
-		</div>
-		
-	</div>
-</body>
+<h1>Contact Us</h1>
+
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= label_tag :name %>
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+    </div>      
+    <div class="form-group">
+      <%= label_tag :email, "Email Address" %>
+      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :message %>
+      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+    </div>      
+  </div>
+</div>
+<%= submit_tag "Send" %>   
+<% end %>
