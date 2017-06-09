@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  
+
   <head>
     <title>Bike-Berlin</title>
 
@@ -30,8 +30,14 @@
             <a class="navbar-brand" href="/">Bike Shop</a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-           
-                
+            <ul class="nav navbar-nav">
+             <li class="active"><a href="/">Home</a></li>
+             <li class="active"><a href="/static_pages/about">About</a></li>
+             <li class="active"><a href="/static_pages/contact">Contact</a></li>
+             <li class="active"><a href="/products">Products</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
                 <%= form_tag("/products", method: "get", class:"navbar-form navbar-right") do %>
                   <div class="form-group">
                     <%= label_tag(:q, "Search for:", class:"hidden") %>
@@ -39,20 +45,20 @@
                   </div>
                 <%= submit_tag("Search", class:"btn btn-default") %>
                 <% end %>
-             
-             
-           
-  		    
-            <ul class="nav navbar-nav navbar-right">
-  			     <li class="active"><a href="/">Home</a></li>
-  			     <li class="active"><a href="/static_pages/about">About</a></li>
-  			     <li class="active"><a href="/static_pages/contact">Contact</a></li>
-             <li class="active"><a href="/products">Products</a></li>
-  		      </ul>
+              </li>
+              <li>
+                <% if user_signed_in? %>
+                  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                  <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+              </li>
+            </ul>
           </div>
         </div>  
       </nav>
-
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
       <%= yield %>
 
       <footer>
