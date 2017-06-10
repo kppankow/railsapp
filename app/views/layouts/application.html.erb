@@ -57,9 +57,17 @@
           </div>
         </div>  
       </nav>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-      <%= yield %>
+
+      <div class="row">
+        <% if alert %>
+          <p class="alert alert-notice", role="alert"><%= alert %></p>
+        <% end %>
+        <% if notice %>
+          <p class="alert alert-info", id="notice", role="alert"><%= notice %></p>
+        <% end %>
+
+        <%= yield %>
+      </div>
 
       <footer>
         <div class="container-fluid">
