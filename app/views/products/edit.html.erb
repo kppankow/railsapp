@@ -2,5 +2,5 @@
 
 <%= render 'form', product: @product %>
 <%= image_tag(@product.image_url, class: "img-responsive my-image") %>
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<%= link_to('Show', @product, class: "btn btn-basic") %>
+<%= link_to('Back', products_path, class: "btn btn-basic") %>
