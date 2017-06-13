@@ -30,4 +30,8 @@
 
 <%= link_to('Edit', edit_product_path(@product), class: "btn btn-basic") %>
 <%= link_to('Back', products_path, class: "btn btn-basic") %>
-<%= @product.highest_rating_comment %> 
+
+
+<%= render 'new_comment' %>
+<%= render 'comments' %>
+
