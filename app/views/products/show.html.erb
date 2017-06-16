@@ -43,15 +43,15 @@
     </p>
   <% end %>
 <% end %>
+<%= link_to('Edit', edit_product_path(@product), class: "btn btn-basic") %>
+<%= link_to('Back', products_path, class: "btn btn-basic") %>
+
 
 <%= render 'comments' %>
 
     <div class="digg_pagination">
       <%= will_paginate @comments %>
     </div>
-
-<%= link_to('Edit', edit_product_path(@product), class: "btn btn-basic") %>
-<%= link_to('Back', products_path, class: "btn btn-basic") %>
 
 
 
