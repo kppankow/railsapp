@@ -7,6 +7,9 @@ class Ability
         		can :manage, :all
         	else
         		can :read, User, id: user.id
+        		can :read, Product
+        		can :create, Order
+        		can [:create, :read] comment
         end
     end
   
