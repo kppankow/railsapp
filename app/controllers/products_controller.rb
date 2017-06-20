@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /products
   # GET /products.json
   def index
@@ -32,16 +32,6 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to :back, notice: 'Product was successfully edited.' }
-        format.json { render :show, status: :edited, location: @product }
-      else
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # POST /products
