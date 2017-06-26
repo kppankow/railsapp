@@ -31,10 +31,11 @@
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-             <li class="active"><a href="/">Home</a></li>
-             <li class="active"><a href="/static_pages/about">About</a></li>
-             <li class="active"><a href="/static_pages/contact">Contact</a></li>
-             <li class="active"><a href="/products">Products</a></li>
+              <li><%=link_to 'Home', root_path %></li>
+              <li><%=link_to 'About', static_pages_about_path %></li>
+              <li><%=link_to 'Products', products_path %></li>
+              <li><%=link_to 'Contact', static_pages_contact_path %></li>
+              
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li>
@@ -68,12 +69,12 @@
 
         <%= yield %>
       </div>
-
+    </div>
       <footer>
         <div class="container-fluid">
           &copy; 2015 Bike Berlin
         </div>
       </footer>
-    </div>
+    
   </body>
 </html>
