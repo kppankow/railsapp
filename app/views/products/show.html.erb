@@ -26,15 +26,16 @@
   <%= @product.price %>
 </P>
 
-<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
 
 
 <%= link_to('Edit', edit_product_path(@product), class: "btn btn-basic") %>
 <%= link_to('Back', products_path, class: "btn btn-basic") %>
 
-<%= render 'new_comment' %>
-<%= render 'comments' %>
-
+<div id= "comments">
+  <%= render 'new_comment' %>
+  <%= render 'comments' %>
+</div>
     <div class="digg_pagination">
       <%= will_paginate @comments %>
     </div>
