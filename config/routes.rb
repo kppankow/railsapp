@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
-
-  resources :object_names
+  resources :orders, only: [:index, :show, :create, :destroy]
+  
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
 
-  resources :orders, only: [:index, :show, :create, :destroy]
+  
 
   #  For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
