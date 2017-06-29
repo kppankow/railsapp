@@ -10,7 +10,6 @@ class Product < ApplicationRecord
     		Product.where("name ilike ?", "%#{search_term}%") 
     	end
   	end	
-	end
 	def highest_rating_comment
 		comments.rating_desc.first
 	end
@@ -18,3 +17,4 @@ class Product < ApplicationRecord
 		comments.average(:rating).to_f
 	end
 
+end
