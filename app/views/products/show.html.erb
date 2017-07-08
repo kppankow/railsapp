@@ -14,7 +14,6 @@
     <strong>Image url:</strong>
     <%= @product.image_url %>
     <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
-  
   </p>
 
   <P>
@@ -26,7 +25,7 @@
     <strong>Price:</strong>
     <%= @product.price %>
   </P>
-  <% end %>
+ 
 
   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
 
