@@ -44,6 +44,7 @@
 <%= link_to('Back', products_path, class: "btn btn-basic") %>
 
 <div id= "comments">
+  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted</div>
   <%= render 'new_comment' %>
   <%= render 'comments' %>
 </div>
