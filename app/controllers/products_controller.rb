@@ -5,13 +5,11 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if Rails.env.development?
-    end
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
     else
-      @products = Product.paginate(page: params[:page], per_page: 6)
+      @products = Product.all
     end
   end
 
@@ -19,7 +17,6 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    
     @comments = @product.comments.order("created_at DESC").paginate(page: params[:page], per_page: 5)
     @product.viewed!
   end
