@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#landing_page'
 
-  get 'products/index'
+  get '/products/:id', to: 'products#show'
 
   post 'static_pages/thank_you'
 
