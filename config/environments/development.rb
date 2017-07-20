@@ -50,10 +50,13 @@ Rails.application.configure do
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  #config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   default_url_options
+
+  # Configure Rails to generate JS files instead of CoffeeScript
+  config.app_generators.javascript_engine = :javascript
 
 end

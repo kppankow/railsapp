@@ -39,12 +39,12 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <%= form_tag("/products", method: "get", class:"navbar-form navbar-right") do %>
+                <%= form_tag("/products", method: "get", class: "navbar-form navbar-right") do %>
                   <div class="form-group">
-                    <%= label_tag(:q, "Search for:", class:"hidden") %>
-                    <%= text_field_tag(:q, "", type:"text", class:"form-control", placeholder:"search") %>
+                    <%= label_tag(:q, "Search for:", class: "hidden") %>
+                    <%= text_field_tag(:q, "", type:"text", class: "form-control", placeholder: "search") %>
                   </div>
-                <%= submit_tag("Search", class:"btn btn-default") %>
+                <%= submit_tag("Search", class: "btn btn-default") %>
                 <% end %>
               </li>
               <li>
