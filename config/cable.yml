@@ -6,4 +6,4 @@ test:
 
 production:
   adapter: postgresql
-  url: postgres://ylbjmjlsvfivwr:425afeb817437ab803f208fee7f9278554ee63ad46370234b76410d4340c00ae@ec2-107-21-248-129.compute-1.amazonaws.com:5432/de1fr700v3o5pm
+  url: postgres://pffkangifcmdnl:4b99610ad57c44bfd16bb929dd2793de5fdb03301b833637544a2b2de9b910b5@ec2-50-19-83-146.compute-1.amazonaws.com:5432/d15aj191svusnp
